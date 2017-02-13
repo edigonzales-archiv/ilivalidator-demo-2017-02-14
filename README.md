@@ -4,11 +4,11 @@
 
 ### Ohne Fehler
 
-`java -jar apps/ilivalidator-0.9.0/ilivalidator.jar --modeldir data/ data/254900.itf `
+`java -jar apps/ilivalidator-0.9.0/ilivalidator.jar --modeldir data/ data/254900.itf`
 
 ### Mit Fehler
 
-`java -jar apps/ilivalidator-0.9.0/ilivalidator.jar --modeldir data/ data/254900_err.itf `
+`java -jar apps/ilivalidator-0.9.0/ilivalidator.jar --modeldir data/ data/254900_err.itf`
 
 `java -jar apps/ilivalidator-0.9.0/ilivalidator.jar --log data/2549.log --xtflog data/2549_log.xtf --modeldir data/ data/254900_err.itf`
 
@@ -34,7 +34,7 @@
 
 ### Eigene Tests
 
-`java -cp 'apps/ilivalidator-0.10.0/ilivalidator.jar:apps/ilivalidator-0.10.0/libs/*' org.interlis2.validator.Main --modeldir "http://models.geo.admin.ch;data/." control_points.xtf`
+`java -cp 'apps/ilivalidator-0.10.0/ilivalidator.jar:apps/ilivalidator-0.10.0/libs/*' org.interlis2.validator.Main --modeldir "http://models.geo.admin.ch;data/." data/control_points.xtf`
 
 
 
