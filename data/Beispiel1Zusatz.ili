@@ -1,0 +1,26 @@
+INTERLIS 2.3;
+
+CONTRACTED MODEL Beispiel1Zusatz
+  AT "mailto:ceis@localhost"
+  VERSION "2016-03-29" =
+  IMPORTS Beispiel1;
+
+
+  VIEW TOPIC BodenbedeckungZusatz =
+  DEPENDS ON Beispiel1.Bodenbedeckung;
+
+
+    FUNCTION startsWith(str : TEXT;prefix : TEXT):BOOLEAN;
+    
+    
+    VIEW IndustrieGebaeudeSO
+        PROJECTION OF Beispiel1.Bodenbedeckung.Gebaeude;
+        WHERE Gebaeude->Art==#Industrie;
+    =
+      ALL OF Gebaeude;
+      MANDATORY CONSTRAINT startsWith(AssNr,"SO"); !! R1.8
+    END IndustrieGebaeudeSO;
+    
+  END BodenbedeckungZusatz;
+
+END Beispiel1Zusatz.
